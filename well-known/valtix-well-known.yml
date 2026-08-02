@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+notes: >-
+  No /.well-known/ discovery surface found. docs.valtix.com returns 404 for
+  every probed path; www.valtix.com 301-redirects everything to the Cisco
+  "Valtix is part of Cisco" page (acquisition redirect). Recorded absence is
+  valid data — no raw files saved because nothing returned 200.
+hosts:
+  - host: https://docs.valtix.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://www.valtix.com
+    documents:
+      - {path: /.well-known/security.txt, status: 301, redirect: cisco.com acquisition page}
+      - {path: /.well-known/openid-configuration, status: 301, redirect: cisco.com acquisition page}
+      - {path: /.well-known/oauth-authorization-server, status: 301, redirect: cisco.com acquisition page}
+      - {path: /.well-known/api-catalog, status: 301, redirect: cisco.com acquisition page}
+      - {path: /.well-known/ai-plugin.json, status: 301, redirect: cisco.com acquisition page}
+      - {path: /llms.txt, status: 301, redirect: cisco.com acquisition page}

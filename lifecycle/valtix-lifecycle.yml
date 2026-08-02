@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.valtix.com/releases/overview/
+versioning:
+  scheme: calendar release trains (YY.MM), per-component versions (Controller UI, Gateways, Terraform provider)
+  current: 26.5.1 (Terraform provider, 2026-06-01)
+  docs: https://docs.valtix.com/releases/overview/
+company_lifecycle:
+  status: acquired
+  acquirer: Cisco
+  acquired: '2023'
+  successor_product: Cisco Multicloud Defense
+  evidence: https://valtix.com 301-redirects to https://www.cisco.com/c/en/us/products/security/valtix-is-part-of-cisco.html
+  continuity: >-
+    docs.valtix.com remains live and maintained (release notes through the
+    25.08 train) and the valtix-security Terraform provider continues to ship
+    (26.5.1, June 2026); the standalone Valtix website, sign-up, and commercial
+    pages now redirect to Cisco.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No published deprecation policy found on docs.valtix.com.
+sla: null
+status_page: null
+deprecated_operations: []

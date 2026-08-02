@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.terraform.io/v1/providers/valtix-security/valtix
+notes: >-
+  Valtix (acquired by Cisco in 2023; product now sold as Cisco Multicloud Defense)
+  ships its programmatic surface as a verified partner-tier Terraform provider,
+  still actively published under the valtix-security namespace (latest 26.5.1,
+  2026-06-01, ~169k downloads). No first-party packages found on npm, PyPI,
+  Maven Central, NuGet, RubyGems, Packagist, or crates.io.
+packages:
+  - language: hcl
+    registry: terraform
+    name: valtix-security/valtix
+    url: https://registry.terraform.io/providers/valtix-security/valtix/latest
+    source: https://github.com/valtix-security/terraform-provider-valtix
+    install: |
+      terraform {
+        required_providers {
+          valtix = {
+            source = "valtix-security/valtix"
+          }
+        }
+      }
+    latest_version: 26.5.1
+    published: '2026-06-01'
+    tier: partner
+    downloads: 169328
+    official: true
+  - language: hcl
+    registry: github
+    name: valtix-security/terraform-aws-valtix-iam-discovery
+    url: https://github.com/valtix-security/terraform-aws-valtix-iam-discovery
+    install: 'module source: github.com/valtix-security/terraform-aws-valtix-iam-discovery'
+    description: Terraform module creating the IAM roles required for Valtix discovery on AWS
+    official: true
+  - language: hcl
+    registry: github
+    name: valtix-security/terraform-aws-setup
+    url: https://github.com/valtix-security/terraform-aws-setup
+    install: 'module source: github.com/valtix-security/terraform-aws-setup'
+    description: AWS setup module for integration with Valtix (last pushed 2025-11-20)
+    official: true
+  - language: hcl
+    registry: github
+    name: valtix-security/terraform-azure-setup
+    url: https://github.com/valtix-security/terraform-azure-setup
+    install: 'module source: github.com/valtix-security/terraform-azure-setup'
+    description: Azure setup module for integration with Valtix (last pushed 2026-01-08)
+    official: true

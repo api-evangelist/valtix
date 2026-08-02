@@ -1,0 +1,36 @@
+# Valtix
+
+> Valtix is a multicloud network security platform (agentless, cloud-native firewall for ingress, egress, and east-west traffic across AWS, Azure, GCP, and OCI). Founded in 2018, Valtix was acquired by Cisco in 2023 and is sold today as Cisco Multicloud Defense; the Valtix documentation site and the verified Terraform provider remain live and maintained under the Valtix name.
+
+Valtix publishes no public REST/OpenAPI reference. The supported programmatic
+surface is the Valtix Terraform provider, which authenticates to the Valtix
+Cloud Controller with a tenant API key file. The Controller forwards alerts to
+customer webhook destinations (Slack, ServiceNow, PagerDuty, Microsoft
+Sentinel, Webex) and forwards logs to SIEMs (e.g. Datadog).
+
+## Docs
+
+- [Valtix Documentation](https://docs.valtix.com/): user guide, architecture, tutorials, FAQ, release notes
+- [User Guide](https://docs.valtix.com/userguide/): controller, gateways, policies, administration
+- [Terraform guide](https://docs.valtix.com/userguide/terraform/): discover, deploy, defend via the Terraform provider
+- [Alert integrations](https://docs.valtix.com/userguide/alert/overview/): outbound alert webhooks
+- [Release notes](https://docs.valtix.com/releases/overview/): YY.MM trains for Controller UI, Gateways, Terraform provider
+
+## Packages
+
+- [Terraform provider valtix-security/valtix](https://registry.terraform.io/providers/valtix-security/valtix/latest): verified partner provider, latest 26.5.1 (2026-06-01)
+- [terraform-provider-valtix source](https://github.com/valtix-security/terraform-provider-valtix)
+- [GitHub org valtix-security](https://github.com/valtix-security): setup/onboarding Terraform modules for AWS, Azure, GCP
+
+## Company
+
+- [Valtix is now part of Cisco](https://www.cisco.com/c/en/us/products/security/valtix-is-part-of-cisco.html)
+- Successor product: Cisco Multicloud Defense
+
+## Catalog artifacts (API Evangelist)
+
+- packages/valtix-packages.yml: first-party Terraform provider + modules
+- authentication/valtix-authentication.yml: controller API-key auth, roles, SSO/MFA
+- asyncapi/valtix-alerts-webhooks.yml: outbound alert webhook catalog
+- changelog/valtix-changelog.yml: recent release entries
+- lifecycle/valtix-lifecycle.yml: versioning trains + acquisition status

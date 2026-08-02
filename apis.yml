@@ -1,24 +1,93 @@
 aid: valtix
 name: Valtix
-description: 'Valtix is a company surfaced as a portfolio company of wing-venture-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Valtix is a multicloud network security platform delivering agentless,
+  cloud-native firewalling — ingress WAF/IDS/IPS, egress TLS decryption and
+  exfiltration prevention, and east-west inspection — across AWS, Azure, GCP,
+  and OCI, driven by continuous cloud asset discovery and tag-based dynamic
+  policy. Founded in 2018 and acquired by Cisco in 2023, the product is sold
+  today as Cisco Multicloud Defense; the Valtix documentation site and the
+  verified Terraform provider (valtix-security/valtix) remain live and actively
+  maintained under the Valtix name, while the standalone website and commercial
+  pages redirect to Cisco.
 url: https://raw.githubusercontent.com/api-evangelist/valtix/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - wing-venture-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: acquired-by-cisco-2023; docs + Terraform provider still maintained, no public REST/OpenAPI surface
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Security
+- Cloud Security
+- Network Security
+- Multicloud
+- Firewall
+- Terraform
+image: https://avatars.githubusercontent.com/valtix-security
 apis: []
+common:
+- type: DomainSecurity
+  url: security/valtix-domain-security.yml
+- name: Website (redirects to Cisco acquisition page)
+  type: Website
+  url: https://www.valtix.com
+- name: Valtix Documentation
+  type: Documentation
+  url: https://docs.valtix.com/
+- name: Valtix User Guide
+  type: GettingStarted
+  url: https://docs.valtix.com/tutorials/overview
+- name: Valtix FAQ
+  type: Support
+  url: https://docs.valtix.com/faq/faq/
+- name: Valtix GitHub Organization
+  type: GitHubOrganization
+  url: https://github.com/valtix-security
+- name: Valtix Release Notes
+  type: ChangeLog
+  url: https://docs.valtix.com/releases/overview/
+- name: Changelog artifact
+  type: ChangeLog
+  url: changelog/valtix-changelog.yml
+- name: Lifecycle artifact
+  type: Lifecycle
+  url: lifecycle/valtix-lifecycle.yml
+- name: Packages artifact (Terraform provider + modules)
+  type: Packages
+  url: packages/valtix-packages.yml
+- name: Authentication artifact (Controller API key, roles, SSO/MFA)
+  type: Authentication
+  url: authentication/valtix-authentication.yml
+- name: Alert webhook destinations artifact
+  type: Webhooks
+  url: asyncapi/valtix-alerts-webhooks.yml
+- name: llms.txt
+  type: LLMsTxt
+  url: llms/valtix-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

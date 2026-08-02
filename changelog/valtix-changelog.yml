@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.valtix.com/releases/overview/
+scheme: calendar (YY.MM release trains; component versions YY.M.PATCH)
+components:
+  - Controller-UI
+  - Gateways
+  - Terraform Provider
+current:
+  terraform_provider: 26.5.1 (published 2026-06-01 on the Terraform Registry)
+notes: >-
+  Valtix publishes dated release notes per train at docs.valtix.com/releases/
+  covering the Controller UI, Gateways, and the Terraform provider. Release
+  notes on docs.valtix.com run through the 25.08 train; the Terraform provider
+  continues shipping on the registry (26.5.1, June 2026). Product is sold by
+  Cisco as Multicloud Defense since the 2023 acquisition.
+entries:
+  - version: 26.5.1
+    component: terraform-provider
+    date: '2026-06-01'
+    source: https://registry.terraform.io/providers/valtix-security/valtix/latest
+    highlights:
+      - Latest Terraform provider release published to the registry.
+  - version: 25.8.1
+    component: terraform-provider
+    date: '2025-09-16'
+    source: https://docs.valtix.com/releases/25.08/Terraform/
+    highlights:
+      - Adds Terraform support for integrating a Service vNet (valtix_service_vpc) with Azure vWAN vHub, peering and propagating spoke vNet CIDRs into vHub route tables.
+      - Upgrades Terraform SDK to v2; provider now requires Terraform 0.12+.
+      - Fixes valtix_service_object validation of overlapping ports across transport_mode port blocks.
+    breaking: false
+  - version: 25.5.1-25.5.5
+    component: terraform-provider
+    date: '2025-06-20'
+    source: https://docs.valtix.com/releases/25.05/Terraform/
+    highlights:
+      - Adds Terraform support for Firewall Threat Defense Virtual (FTDv) Gateway (valtix_ftdv_gateway) resources, data source, and import.
+      - Fixes valtix_profile_network_intrusion creation failing with "category app-detect is not valid".
+      - Documentation formatting fixes (25.5.2-25.5.5).
+    breaking: false
+  - version: 25.4.1
+    component: terraform-provider
+    date: '2025-05-07'
+    source: https://docs.valtix.com/releases/25.04/Terraform/
+    highlights:
+      - Adds M7i (2/4/8-core) instance type support for AWS Gateway (valtix_gateway) deployments.
+      - Fixes ssh_public_key not being passed from provider to controller for new Gateway instances.
+    breaking: false

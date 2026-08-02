@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.valtix.com/userguide/alert/overview/
+type: Webhooks
+notes: >-
+  Valtix publishes no AsyncAPI. Its documented event surface is outbound: the
+  Valtix Cloud Controller forwards user-defined system alerts (by event type
+  and severity) to customer-configured webhook/API destinations via Alert
+  Service Profiles + Alert Rules, and forwards traffic/security logs to SIEM
+  destinations. Captured verbatim from the docs; no inbound webhook receiver
+  is documented.
+delivery_model: outbound alerts to customer-supplied webhook URLs / API keys
+configuration: Administration -> Alert Profiles -> Services (+ Alert Rules)
+destinations:
+  - name: Slack
+    kind: incoming-webhook-url
+    docs: https://docs.valtix.com/userguide/alert/slack/
+  - name: ServiceNow
+    kind: webhook-url + api-key
+    docs: https://docs.valtix.com/userguide/alert/servicenow/
+  - name: PagerDuty
+    kind: api-key
+    docs: https://docs.valtix.com/userguide/alert/pagerduty/
+  - name: Microsoft Sentinel
+    kind: api
+    docs: https://docs.valtix.com/userguide/alert/mssentinel/
+  - name: Webex
+    kind: incoming-webhook-url
+    docs: https://docs.valtix.com/userguide/alert/webex/
+  - name: Datadog (log forwarding)
+    kind: log-forwarding
+    docs: https://docs.valtix.com/userguide/log-forwarding/destinations/datadog/
+event_types:
+  - system alerts (user-defined event types and severity levels detected by the Valtix Cloud Controller)
+  - security/traffic log forwarding to SIEM destinations
