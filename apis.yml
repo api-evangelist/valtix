@@ -1,15 +1,11 @@
 aid: valtix
 name: Valtix
-description: >-
-  Valtix is a multicloud network security platform delivering agentless,
-  cloud-native firewalling — ingress WAF/IDS/IPS, egress TLS decryption and
-  exfiltration prevention, and east-west inspection — across AWS, Azure, GCP,
-  and OCI, driven by continuous cloud asset discovery and tag-based dynamic
-  policy. Founded in 2018 and acquired by Cisco in 2023, the product is sold
-  today as Cisco Multicloud Defense; the Valtix documentation site and the
-  verified Terraform provider (valtix-security/valtix) remain live and actively
-  maintained under the Valtix name, while the standalone website and commercial
-  pages redirect to Cisco.
+description: Valtix is a multicloud network security platform delivering agentless, cloud-native firewalling — ingress
+  WAF/IDS/IPS, egress TLS decryption and exfiltration prevention, and east-west inspection — across AWS, Azure,
+  GCP, and OCI, driven by continuous cloud asset discovery and tag-based dynamic policy. Founded in 2018 and acquired
+  by Cisco in 2023, the product is sold today as Cisco Multicloud Defense; the Valtix documentation site and the
+  verified Terraform provider (valtix-security/valtix) remain live and actively maintained under the Valtix name,
+  while the standalone website and commercial pages redirect to Cisco.
 url: https://raw.githubusercontent.com/api-evangelist/valtix/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -31,7 +27,7 @@ accessModel:
   method: derived
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-19'
 tags:
 - Company
 - Security
@@ -43,6 +39,12 @@ tags:
 image: https://avatars.githubusercontent.com/valtix-security
 apis: []
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/cisco/
+  name: Cisco
+  x-relationship: acquisition
+  x-generated-by: cisco-family:2026-08-19
+  x-acquired: 2023
 - type: DomainSecurity
   url: security/valtix-domain-security.yml
 - name: Website (redirects to Cisco acquisition page)
@@ -91,3 +93,6 @@ x-enrichment:
   status: enriched
   artifacts_added: 8
   pass: local-v1
+x-parent: cisco
+x-relationship: acquisition
+x-acquired: 2023
